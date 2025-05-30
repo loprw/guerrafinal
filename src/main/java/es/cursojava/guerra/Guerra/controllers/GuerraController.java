@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 public class GuerraController {
 
-	@GetMapping(value="")
-	public String inicio() {
+	@GetMapping("/")
+	public String iniciar() {
 		return "index";
 	}
 	
-	 @GetMapping(value="/registrar")
-	 public String registro() {
+	@GetMapping("/registrar")
+	 public String registrar() {
 		 System.out.println("Entrando en registro");
 		 
 		 return "register";
