@@ -1,0 +1,81 @@
+body {
+  background: url('/images/war-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: 'Segoe UI', sans-serif;
+  color: #ddd; /* gris claro para el texto */
+}
+
+.form-container {
+  width: 320px;
+  background-color: rgba(50, 50, 50, 0.75); /* gris oscuro translúcido */
+  border: 2px solid #666; /* gris medio */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+}
+
+form h3 {
+  margin-top: 0;
+  color: #e0e0e0; /* Gris claro para mejor visibilidad */
+  text-align: center;
+  font-size: 1.8em;
+  text-shadow: 1px 1px 4px #111; /* sombra un poco más fuerte para destacar */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(70, 70, 70, 0.9); /* gris oscuro */
+  color: #eee; /* gris muy claro */
+  box-shadow: inset 0 0 5px #222;
+}
+
+input[type="text"]::placeholder {
+  color: #999; /* gris medio */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #555; /* gris medio */
+  color: #eee;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #777; /* gris un poco más claro */
+}
+.new-user-link {
+  display: block;               /* Para que ocupe toda la línea y se pueda centrar */
+  margin-top: 6px;
+  font-size: 0.75em;            /* Más pequeño aún */
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;           /* Centrado horizontal */
+  transition: color 0.2s ease;
+  user-select: none;            /* Opcional: para que no se seleccione fácilmente */
+}
+
+.new-user-link:hover {
+  color: #888;
+  text-decoration: underline;
+}
