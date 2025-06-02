@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<title>Alta de nuevo usuario</title>
+		<title>Página de inicio</title>
 		<link rel="stylesheet" th:href="@{/styles/index_style.css}">
+
 	</head>
 	
 	<body>
 		<fieldset>
-			<form th:action="@{/guerra/registrar_usuario}" th:object="${nuevoUsuario}" method="post">
-				<h3>Nuevo Usuario</h3>
-				<p><span th:class="${nuevoUsuario.validated?'':'La contraseña no coincide...'}"></span></p>
+			<form th:action="@{/guerra/comprobar_usuario}" th:object="${usuarioComprobar}" method="post">
+				<h3>Formulario de registro</h3>
 				<label>Nombre:     <input type="text" th:field="*{name}" placeholder="Nombre de usuario"></label><br><br>
 				<label>Contraseña: <input type="text" th:field="*{password}" placeholder="Contraseña"></label><br>
-				<label>Repetir Contraseña: <input type="text" th:field="*{repeatPassword}" placeholder="Contraseña"></label><br>
+				<a th:href="@{/guerra/registrar}" class="new-user-link">Pulsa aquí para crear un nuevo usuario</a><br>
 				<button type="submit">Enviar</button>
-			</form>
+			</form>			
 		</fieldset>
 	</body>
 </html>
