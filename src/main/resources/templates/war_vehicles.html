@@ -7,6 +7,26 @@
 	</head>
 	
 	<body>
-	
+		<table>
+			<thead>
+				<tr>
+					<td>Nombre</td>
+					<td>Puntos de vida</td>
+					<td>Ataque</td>
+					<td>Defensa</td>
+					<td>Tipo</td>
+					<td>Guerreros Embarcados</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="{vehiculo: ${listado}">
+					<td><span th:text="${vehiculo.nombre}"></span></td>
+					<td><span th:text="${vehiculo.puntosVida}"></span></td>
+					<td><span th:text="${vehiculo.ataque"></span></td>
+					<td><span th:text="${vehiculo.defensa}"></span></td>
+					<td><span th:text="${vehiculo.tipo}"></span></td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>

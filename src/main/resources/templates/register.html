@@ -7,12 +7,12 @@
 	
 	<body>
 		<fieldset>
-			<form th:action="@{/guerra/registrar_usuario}" th:object="${nuevoUsuario}" method="post">
+			<form th:action="@{/guerra/registrar_usuario}" th:object="${usuario}" method="post">
 				<h3>Nuevo Usuario</h3>
-				<p><span th:class="${nuevoUsuario.validated?'':'La contraseña no coincide...'}"></span></p>
+				<p><span th:class="${usuario.validated?'':'La contraseña no coincide...'}"></span></p>
 				<label>Nombre:     <input type="text" th:field="*{name}" placeholder="Nombre de usuario"></label><br><br>
-				<label>Contraseña: <input type="text" th:field="*{password}" placeholder="Contraseña"></label><br>
-				<label>Repetir Contraseña: <input type="text" th:field="*{repeatPassword}" placeholder="Contraseña"></label><br>
+				<label>Contraseña: <input type="password" th:field="*{password}" placeholder="Contraseña"></label><br>
+				<label>Repetir Contraseña: <input type="password" th:field="*{repeatPassword}" placeholder="Contraseña"></label><br>
 				<button type="submit">Enviar</button>
 			</form>
 		</fieldset>

@@ -8,10 +8,10 @@
 	
 	<body>
 		<fieldset>
-			<form th:action="@{/guerra/comprobar_usuario}" th:object="${usuarioComprobar}" method="post">
+			<form th:action="@{/guerra/comprobar_usuario}" th:object="${usuario}" method="post">
 				<h3>Formulario de registro</h3>
-				<label>Nombre:     <input type="text" th:field="*{name}" placeholder="Nombre de usuario"></label><br><br>
-				<label>Contraseña: <input type="text" th:field="*{password}" placeholder="Contraseña"></label><br>
+				<label>Nombre:     <input type="text" th:field="*{name}" placeholder="Nombre de usuario"></label><br>
+				<label>Contraseña: <input type="password" th:field="*{password}" placeholder="Contraseña"></label><br>
 				<a th:href="@{/guerra/registrar}" class="new-user-link">Pulsa aquí para crear un nuevo usuario</a><br>
 				<button type="submit">Enviar</button>
 			</form>			

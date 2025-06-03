@@ -6,6 +6,6 @@ import es.cursojava.guerra.Guerra.entities.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 	
-	public boolean findByNameAndPassword(String name, String password);
+	public boolean existsByNameAndPassword(String name, String password);
 
 }
