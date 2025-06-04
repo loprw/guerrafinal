@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Listado de Vehículos de Guerra</title>
+		<link rel="stylesheet" th:href="@{/styles/index_style.css}">
+	</head>
+
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<td></td>
+					<td>Nombre</td>
+					<td>Puntos de vida</td>
+					<td>Ataque</td>
+					<td>Defensa</td>
+					<td>Tipo</td>
+					<td>Guerreros Embarcados</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="vehiculo: ${listado}">
+					<td hidden="hidden"><span th:text="${vehiculo.id}"></span></td>
+					<td>
+						<input type="checkbox">
+					</td>
+					<td>
+						<a th:href="@{/guerra/borrar}">
+							<img src="/images/delete.png">
+						</a>
+					</td>
+					<td><span th:text="${vehiculo.nombre}"></span></td>
+					<td><span th:text="${vehiculo.puntosVida}"></span></td>
+					<td><span th:text="${vehiculo.ataque"></span></td>
+					<td><span th:text="${vehiculo.defensa}"></span></td>
+					<td><span th:text="${vehiculo.tipo}"></span></td>
+					<td>
+						<a th:href="@{/guerra/modificar_guerreros}">
+							<img src="/images/add.png">
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<a th:href="@{/guerra/anadir}">
+			<button type="submit">Añadir vehículo</button>
+		</a>
+		<a th:href="@{/guerra/enfrentamiento}">
+			<button type="submit">Iniciar enfrentamiento</button>
+		</a>
+	</body>
+</html>

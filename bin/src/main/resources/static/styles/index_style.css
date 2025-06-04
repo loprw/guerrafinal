@@ -1,0 +1,85 @@
+body {
+  background: url('/images/war-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: 'Segoe UI', sans-serif;
+  color: #ddd;
+}
+
+.form-container {
+  width: 320px;
+  background-color: rgba(50, 50, 50, 0.75);
+  border: 2px solid #666;
+  padding: 30px 20px; /* Más estrecho para margen interno */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+form h3 {
+  margin-top: 0;
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 1.8em;
+  text-shadow: 1px 1px 4px #111;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(70, 70, 70, 0.9);
+  color: #eee;
+  box-shadow: inset 0 0 5px #222;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #666;
+}
+
+.new-user-link {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.8em;
+  text-align: center;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.new-user-link:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
