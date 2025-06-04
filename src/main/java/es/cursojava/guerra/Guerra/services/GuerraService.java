@@ -52,4 +52,14 @@ public class GuerraService {
 		
 		return vehiculos;
 	}
+	
+	public VehiculoGuerra encontrarVehiculo(long id) {
+				
+		return vrepo.findById(id);
+	}
+	
+	public void borrarVehiculo(long id) {
+		
+		vrepo.deleteById(id);
+	}
 }
