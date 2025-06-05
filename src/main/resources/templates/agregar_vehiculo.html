@@ -7,18 +7,19 @@
 
 	<body>
 		<fieldset>
-			<form>
-				<label>Nombre<input type="text"></label>
+			<form th:action="@{/guerra/anadir2}" th:object="${vehiculo}" method="post">
+				<label>Nombre<input type="text" th:field="*{nombre}"></label>
 				<label>Puntos de vida<input type="number" value="1200" readonly="readonly"></label>
 				<label>Ataque<input type="number"></label>
 				<label>Defensa<input type="number"></label>
 				<label>Tipo
-					<select required>
-						<option disabled selected>Selecciona una opción</option>
+					<select th:field="*{tipo}" required>
+						<option value="" disabled selected>Selecciona una opción</option>
 						<option value="Destructor">Destructor</option>
 						<option value="Tanque">Tanque</option>
 					</select>
 				</label>
+				<button type="submit">Enviar</button>
 			</form>
 		</fieldset>
 	</body>

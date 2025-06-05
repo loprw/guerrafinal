@@ -4,13 +4,11 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 import es.cursojava.guerra.Guerra.entities.Guerrero;
 import es.cursojava.guerra.Guerra.entities.VehiculoGuerra;
 import es.cursojava.guerra.Guerra.utils.Utils;
 
-@Component
 public class Tanque extends VehiculoGuerra{
 	
 	private static final Logger logger = LoggerFactory.getLogger(Tanque.class);

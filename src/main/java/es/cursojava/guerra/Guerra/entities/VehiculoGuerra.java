@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "TB_VEHICULO_GUERRA")
-public abstract class VehiculoGuerra implements es.cursojava.guerra.Guerra.interfaces.Tripulable {
+public class VehiculoGuerra implements es.cursojava.guerra.Guerra.interfaces.Tripulable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -59,6 +59,10 @@ public abstract class VehiculoGuerra implements es.cursojava.guerra.Guerra.inter
 
 	public Long getId() {
 		return id;
+	}
+	
+	public void setId(Long num) {
+		this.id = num;
 	}
 
 	public String getNombre() {
@@ -128,6 +132,29 @@ public abstract class VehiculoGuerra implements es.cursojava.guerra.Guerra.inter
 		builder.append(guerrerosEmbarcados);
 		builder.append("]");
 		return builder.toString();
+	}
+
+	@Override
+	public int atacar() {
+		return 0;
+	}
+
+	@Override
+	public int defender(int valorAtaque) {
+		return 0;
+	}
+
+	@Override
+	public void recibirDany(int totalAtaque, int totalDefensa) {
+	}
+
+	@Override
+	public void embarcarGuerrero(Guerrero guerrero) {
+		
+	}
+
+	@Override
+	public void embarcarGuerreros(Guerrero[] guerreros) {
 	}
 }
 

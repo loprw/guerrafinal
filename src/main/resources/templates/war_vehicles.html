@@ -6,49 +6,50 @@
 	</head>
 
 	<body>
-		<table>
-			<thead>
-				<tr>
-					<td></td>
-					<td>Nombre</td>
-					<td>Puntos de vida</td>
-					<td>Ataque</td>
-					<td>Defensa</td>
-					<td>Tipo</td>
-					<td>Guerreros Embarcados</td>
-					<td></td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="vehiculo: ${listado}">
-					<td hidden="hidden"><span th:text="${vehiculo.id}"></span></td>
-					<td>
-						<input type="checkbox">
-					</td>
-					<td>
-						<a th:href="@{/guerra/borrar}">
-							<img src="/images/delete.png">
-						</a>
-					</td>
-					<td><span th:text="${vehiculo.nombre}"></span></td>
-					<td><span th:text="${vehiculo.puntosVida}"></span></td>
-					<td><span th:text="${vehiculo.ataque"></span></td>
-					<td><span th:text="${vehiculo.defensa}"></span></td>
-					<td><span th:text="${vehiculo.tipo}"></span></td>
-					<td>
-						<a th:href="@{/guerra/modificar_guerreros}">
-							<img src="/images/add.png">
-						</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<a th:href="@{/guerra/anadir}">
-			<button type="submit">Añadir vehículo</button>
-		</a>
-		<a th:href="@{/guerra/enfrentamiento}">
+		<form th:action="@{/guerra/enfrentamiento}" th:object="${ids}" method="post">
+			<table>
+				<thead>
+					<tr>
+						<td></td>
+						<td>Selección</td>
+						<td>Nombre</td>
+						<td>Puntos de vida</td>
+						<td>Ataque</td>
+						<td>Defensa</td>
+						<td>Tipo</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="vehiculo: ${listado}">
+						<td hidden="hidden"><span th:text="${vehiculo.id}"></span></td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<a th:href="@{/guerra/borrar/${vehiculo.id}}">
+								<img src="/images/delete.png" width="40" height="30">
+							</a>
+						</td>
+						<td><span th:text="${vehiculo.nombre}"></span></td>
+						<td><span th:text="${vehiculo.puntosVida}"></span></td>
+						<td><span th:text="${vehiculo.ataque}"></span></td>
+						<td><span th:text="${vehiculo.defensa}"></span></td>
+						<td><span th:text="${vehiculo.tipo}"></span></td>
+						<td>
+							<a th:href="@{/guerra/modificar_guerreros}">
+								<img src="/images/add.png" width="40" height="30">
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<a th:href="@{/guerra/anadir}">
+				<button type="button">Añadir vehículo</button>
+			</a>
 			<button type="submit">Iniciar enfrentamiento</button>
-		</a>
+		</form>
+		<br>
+
 	</body>
 </html>
